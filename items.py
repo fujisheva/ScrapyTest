@@ -5,12 +5,13 @@
 # See documentation in:
 # http://doc.scrapy.org/en/latest/topics/items.html
 
-import scrapy.item import Item,Field
+from scrapy.item import Item,Field
 
 
-class ScrapytestItem(scrapy.Item):
+class ScrapytestItem(Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
+    itemID=Field()
     title=Field()
     status=Field()
     area=Field()
@@ -19,7 +20,7 @@ class ScrapytestItem(scrapy.Item):
     avPrice=Field()
     bond=Field()
     facility=Field()
-    address=Field()
+    #address=Field()
 
-
-    
+class UrlItem(Item):
+    url=Field()
